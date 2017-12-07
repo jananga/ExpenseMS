@@ -22,6 +22,8 @@ public interface CategoryDAO {
     public Category searchCategory(int id);
     //update particular category
     public boolean updateCategory(Category category);
+    //Delete Catagory
+    public boolean  deleteCategory(int id);
     //List All Categories
     public List<Category> listAll();
     
