@@ -29,7 +29,8 @@ public class CategoryDAOImp implements CategoryDAO{
           boolean ok = false;
           
           //Creating the query
-          String query = "INSERT INTO `dbexpense`.`category` (`id`, `name`) VALUES ('?', '?');";
+          String query = "INSERT INTO `dbexpense`.`category` (`id`, `name`) VALUES (NULL, ?);";
+          //JOptionPane.showMessageDialog(null, "query: "+query);
         try 
         {
             //Creating the Connection
@@ -37,11 +38,14 @@ public class CategoryDAOImp implements CategoryDAO{
 
             //Create the prepared statement
             PreparedStatement ps = con.prepareStatement(query);
-
+            
+            //JOptionPane.showMessageDialog(null, "query: "+category.getName().toString());
+            
             //Setting the sequestial values
-            ps.setInt(1, category.getId());
-            ps.setString(2, category.getName());
+            //ps.setInt(1, category.getId());
+            ps.setString(1, category.getName().toString());
 
+            
             //Executing the prepared statement
             int res = ps.executeUpdate();
 
@@ -124,7 +128,7 @@ public class CategoryDAOImp implements CategoryDAO{
             Connection con = DBConnectionFactory.getConnection();
             
             //create sql
-            String query = "UPDATE  `dbexpense`.`category` SET  `name` =  '?' WHERE  `category`.`id` =?";
+            String query = "UPDATE  `dbexpense`.`category` SET  `name` =  ? WHERE  `category`.`id` =?";
             
             //Create prepared statement
             PreparedStatement ps = con.prepareStatement(query);
