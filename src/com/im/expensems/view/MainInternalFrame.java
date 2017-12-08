@@ -110,13 +110,13 @@ public class MainInternalFrame extends javax.swing.JInternalFrame {
 
         DynamicPanel.setBackground(new java.awt.Color(204, 204, 255));
         DynamicPanel.setMaximumSize(new java.awt.Dimension(327670, 327670));
-        DynamicPanel.setMinimumSize(new java.awt.Dimension(300, 200));
+        DynamicPanel.setMinimumSize(new java.awt.Dimension(400, 200));
 
         javax.swing.GroupLayout DynamicPanelLayout = new javax.swing.GroupLayout(DynamicPanel);
         DynamicPanel.setLayout(DynamicPanelLayout);
         DynamicPanelLayout.setHorizontalGroup(
             DynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 735, Short.MAX_VALUE)
         );
         DynamicPanelLayout.setVerticalGroup(
             DynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -15,7 +15,6 @@ import java.util.List;
  * @author rpa29
  */
 public interface CategoryDAO {
-    
     //Insert Catagory
     public boolean insertCatagory(Category category);
     //Search particular Category
@@ -26,5 +25,6 @@ public interface CategoryDAO {
     public boolean  deleteCategory(int id);
     //List All Categories
     public List<Category> listAll();
+    
     
 }

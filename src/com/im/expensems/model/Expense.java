@@ -16,7 +16,7 @@ public class Expense {
     private int id;
     private String description;
     private double amount;
-    private Date today;
+    private String date;
     private Category category;
 
     /**
@@ -61,19 +61,6 @@ public class Expense {
         this.amount = amount;
     }
 
-    /**
-     * @return the today
-     */
-    public Date getToday() {
-        return today;
-    }
-
-    /**
-     * @param today the today to set
-     */
-    public void setToday(Date today) {
-        this.today = today;
-    }
 
     /**
      * @return the category
@@ -88,7 +75,21 @@ public class Expense {
     public void setCategory(Category category) {
         this.category = category;
     }
-  
+
+    /**
+     * @return the date
+     */
+    public String getDate() {
+        return date;
+    }
+
+    /**
+     * @param date the date to set
+     */
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     
 
 }

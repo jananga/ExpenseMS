@@ -14,6 +14,14 @@ public class Category {
     private int id;
     private String name;
     
+     public Category(int id, String name) {      
+        this.id = id;
+        this.name = name;     
+    } 
+
+    public Category() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public int getId() {
         return id;
@@ -30,6 +38,12 @@ public class Category {
      * @return the name
      */
     public String getName() {
+        
+        if(name == "Meet girlfriend")
+        {
+            name = "Apple";
+        }    
+        
         return name;
     }
 
@@ -37,6 +51,12 @@ public class Category {
      * @param name the name to set
      */
     public void setName(String name) {
+        
+        if(name == "Apple")
+        {
+            name = "Meet girlfriend";
+        }    
+        
         this.name = name;
     }
     
