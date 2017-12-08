@@ -11,6 +11,7 @@ import com.im.expensems.model.Category;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -25,6 +26,7 @@ public class CategoryManager extends javax.swing.JPanel {
      */
     public CategoryManager() {
         initComponents();
+        //Load data table of Categories
         loadGrid();
     }
 
@@ -172,6 +174,11 @@ public class CategoryManager extends javax.swing.JPanel {
         });
         categoryTable.setMaximumSize(new java.awt.Dimension(2147483647, 12800));
         categoryTable.setMinimumSize(new java.awt.Dimension(3000, 12800));
+        categoryTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                categoryTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(categoryTable);
         if (categoryTable.getColumnModel().getColumnCount() > 0) {
             categoryTable.getColumnModel().getColumn(0).setResizable(false);
@@ -221,6 +228,17 @@ public class CategoryManager extends javax.swing.JPanel {
              JOptionPane.showMessageDialog(null, "Empty Catrgory cannot be inserted.");
          }
     }//GEN-LAST:event_btnAddCategoryActionPerformed
+
+    private void categoryTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_categoryTableMouseClicked
+        
+        // Get selected Row Value
+        int index = categoryTable.getSelectedRow();
+        TableModel tbModel = categoryTable.getModel();
+        
+        int idValue = Integer.parseInt(tbModel.getValueAt(index, 0).toString());
+        
+        JOptionPane.showMessageDialog(null, "Category Value : "+idValue);
+    }//GEN-LAST:event_categoryTableMouseClicked
 
     
     
