@@ -208,8 +208,6 @@ public class CategoryDAOImp implements CategoryDAO{
         //check update status
         boolean ok = false;
         
-        //create Catagory object
-        Category category = new Category();
         
         try {
             //create connection
@@ -220,7 +218,7 @@ public class CategoryDAOImp implements CategoryDAO{
             
             //Create prepared statement
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setInt(1, category.getId());
+            ps.setInt(1, id);
             
             //get number of values updated
             int rows = ps.executeUpdate();
@@ -231,7 +229,7 @@ public class CategoryDAOImp implements CategoryDAO{
             }else//no rows deleted or multiple rows deleted
             {
                 ok = false;
-                JOptionPane.showMessageDialog(null, rows+" deleted.");
+                //JOptionPane.showMessageDialog(null, rows+" deleted.");
             }
     
         } catch (Exception ex) 
