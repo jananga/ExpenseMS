@@ -26,6 +26,7 @@ public class DBConnectionFactory {
     
     public static Connection getConnection() throws ClassNotFoundException, SQLException
     {
+		//test
         //Check Connection
         if(connection == null)
         {
